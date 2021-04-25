@@ -1,6 +1,7 @@
 
 
 
+// @ts-ignore
 function defaultTemplate(
     { template },
     opts,

@@ -1,7 +1,7 @@
 /**
  * componentExists
  *
- * Check whether the given component exist in either the components or containers directory
+ * Check whether the given component exist in either the components or blocks directory
  */
 
 import fs from 'fs';
@@ -16,7 +16,7 @@ export function componentExists(component: string) {
 
 export function containerExists(container: string) {
     const containers = fs.readdirSync(
-        path.join(__dirname, '../../../src/containers')
+        path.join(__dirname, '../../../src/blocks')
     );
     return containers.indexOf(container) >= 0;
 }
@@ -38,5 +38,5 @@ function walkDir(directory: string) {
 export function listComponentsDirectories() {
     // Not using path.join(__dirname,) as it give really long name when listed
     const sourceDir = 'src/components';
-    return walkDir(sourceDir).filter((dirPath) => dirPath.match(/elements$/)||dirPath.match(/containers$/));
+    return walkDir(sourceDir).filter((dirPath) => dirPath.match(/elements$/)||dirPath.match(/blocks$/));
 }

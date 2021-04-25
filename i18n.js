@@ -11,5 +11,5 @@ module.exports = {
     suffix: "}",
   },
   loadLocaleFrom: (locale, namespace) =>
-    import(`./src/translations/${namespace}_${locale}`).then((m) => m.default),
+    import(`./src/lib/translations/${namespace}_${locale}`).then((m) => m.default),
 };
