@@ -9,7 +9,7 @@ import path from 'path';
 
 export function componentExists(component: string) {
     const components = fs.readdirSync(
-        path.join(__dirname, '../../../src/components')
+        path.join(__dirname, '../../../src/common/components')
     );
     return components.indexOf(component) >= 0;
 }
@@ -37,6 +37,6 @@ function walkDir(directory: string) {
 
 export function listComponentsDirectories() {
     // Not using path.join(__dirname,) as it give really long name when listed
-    const sourceDir = 'src/components';
+    const sourceDir = 'src/common/components';
     return walkDir(sourceDir).filter((dirPath) => dirPath.match(/elements$/)||dirPath.match(/blocks$/));
 }
