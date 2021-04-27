@@ -11,7 +11,7 @@
     "find:unused": "next-unused",
     "format": "prettier --write .",
     "lint:fix": "eslint . --ext ts --ext tsx --ext js --fix",
-    "svg": "npx @svgr/cli -d src/common/components/elements/Icons --ignore-existing src/common/utils/svg-to-react/svgSource --ext tsx --template src/common/utils/svg-to-react/svgTemplate.ts",
+    "svg": "npx @svgr/cli -d src/common/components/elements/Icons --ignore-existing src/common/lib/svg-to-react/svgSource --ext tsx --template src/common/lib/svg-to-react/svgTemplate.ts",
     "test-all": "yarn lint && yarn type-check && yarn test",
     "packages:upgrade": "yarn upgrade-interactive --latest",
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts"

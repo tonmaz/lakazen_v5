@@ -1,8 +1,10 @@
 import React from "react";
+import { Trans } from "@src/common/components/blocks/Trans";
 
 const MyComponent = () => {
   return (
     <div>
+      <Trans />
       <div className="border-t border-accents-2">
         <ul className="py-3">
           <li className="flex justify-between py-1">
