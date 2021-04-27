@@ -14,9 +14,9 @@ import tw, { styled, css, theme } from 'twin.macro';
 {{/if}}
 {{#if wantReactComponent}}
 {{#if wantTranslations}}
-  import common from '../../../translations/common_en.json';
-  import { loadTranslations } from '../../../functions/extractTranslations';
-  import useTranslation from 'next-translate/useTranslation';
+    import common from "@src/common/lib/translations/common_en.json";
+    import { loadTranslations } from "@src/common/lib/functions/extractTranslations";
+    import useTranslation from "next-translate/useTranslation";
 
 {{/if}}
 {{/if}}

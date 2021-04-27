@@ -57,13 +57,13 @@ export const styledGenerator: PlopGeneratorConfig = {
     {
       type: "confirm",
       name: ComponentProptNames.wantStyledComponents,
-      default: true,
+      default: false,
       message: "Do you want to use styled-components?",
     },
     {
       type: "confirm",
       name: ComponentProptNames.wantTranslations,
-      default: false,
+      default: true,
       message:
         "Do you want i18n translations (i.e. will this component use text)?",
     },
