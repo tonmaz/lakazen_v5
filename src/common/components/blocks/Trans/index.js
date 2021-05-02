@@ -12,7 +12,7 @@ export function Trans(props) {
   const tr = loadTranslations(common, t);
   console.log(tr);
   return (
-    <div>
+    <div className="text-3xl">
       <p>Trans component</p>
       {tr.something}
     </div>

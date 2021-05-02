@@ -54,5 +54,31 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/ui")],
 };
+// const colors = require('tailwindcss/colors')
+// module.exports = {
+//   mode: "jit",
+//   purge: ["./src/**/*.{js,ts,jsx,tsx}"],
+//   darkMode: false, // or 'media' or 'class'
+//   theme: {
+//     extend: {
+//       colors: {
+//         white: '#ffffff',
+//         teal: colors.teal,
+//         'blue-gray': colors.blueGray
+//       },
+//       width: {
+//         17: '68rem',
+//         18: '72rem'
+//       },
+//       scale: {
+//         '-100': '-1'
+//       }
+//     }
+//   },
+//   variants: {
+//     rotate: ['group-hover', 'group-focus']
+//   },
+//   plugins: [require("@tailwindcss/ui"), require('@tailwindcss/forms')],
+// }
