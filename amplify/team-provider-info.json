@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-judo-staging-154733-authRole",
+      "UnauthRoleArn": "arn:aws:iam::882695882769:role/amplify-judo-staging-154733-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::882695882769:role/amplify-judo-staging-154733-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-judo-staging-154733-deployment",
+      "UnauthRoleName": "amplify-judo-staging-154733-unauthRole",
+      "StackName": "amplify-judo-staging-154733",
+      "StackId": "arn:aws:cloudformation:eu-central-1:882695882769:stack/amplify-judo-staging-154733/b5d31570-ab5d-11eb-922b-0a5ad69eda70",
+      "AmplifyAppId": "d2iur0u81q5cml"
+    }
+  }
+}

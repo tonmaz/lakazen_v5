@@ -1,7 +1,7 @@
 import "@src/common/globalStyles/main.css";
-import "@src/common/globalStyles/chrome-bug.css";
+
 import Head from "next/head";
-import { Devtools } from "@ui-devtools/tailwind";
+// import { Devtools } from "@ui-devtools/tailwind";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -10,9 +10,10 @@ function MyApp({ Component, pageProps }) {
         <title>Lakazenv2</title>
         <meta name="Description" content="Lakazen2 | Happy Kids" />
       </Head>
-      <Devtools>
-        <Component {...pageProps} />
-      </Devtools>
+
+      {/*<Devtools>*/}
+      <Component {...pageProps} />
+      {/*</Devtools>*/}
     </>
   );
 }
