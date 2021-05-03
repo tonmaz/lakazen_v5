@@ -8,10 +8,8 @@ import { createPost } from "@src/graphql/mutations";
 import { listPosts } from "@src/graphql/queries";
 import { Yahoo } from "@src/common/components/blocks/Yahoo";
 
-Amplify.configure({ ...awsExports, ssr: true });
-
-export async function getServerSideProps({ req }) {
-  const SSR = withSSRContext({ req });
+export async function getStaticProps() {
+  const SSR = withSSRContext();
   const response = await SSR.API.graphql({ query: listPosts });
 
   return {
@@ -27,7 +25,7 @@ const MyComponent = ({ posts }) => {
       {/*<div className="border focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 inline-flex items-center rounded-md px-3 py-2 text-white font-medium text-sm leading-4 bg-teal-300 hover:bg-indigo-700 focus:outline-none shadow-sm">*/}
       {/*  hellofs*/}
       {/*</div>*/}
-      <Yahoo posts={posts} />
+      <Yahoo postsData={posts} />
       {/*<Trans />*/}
       {/*<Done />*/}
     </div>

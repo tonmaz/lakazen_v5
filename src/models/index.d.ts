@@ -8,7 +8,7 @@ export declare class Comments {
   readonly id: string;
   readonly title?: string;
   readonly content?: string;
-  readonly like?: string;
+  readonly likes?: string;
   readonly postID?: string;
   readonly userID?: string;
   constructor(init: ModelInit<Comments>);
@@ -18,7 +18,7 @@ export declare class Comments {
 export declare class Post {
   readonly id: string;
   readonly comment?: string;
-  readonly like?: number;
+  readonly likes?: number;
   readonly description?: string;
   readonly title?: string;
   readonly uploadDate?: string;

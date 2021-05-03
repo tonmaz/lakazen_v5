@@ -1,8 +1,10 @@
 import "@src/common/globalStyles/main.css";
-
 import Head from "next/head";
 // import { Devtools } from "@ui-devtools/tailwind";
+import { Amplify } from "aws-amplify";
+import awsExports from "@src/aws-exports";
 
+Amplify.configure({ ...awsExports, ssr: true });
 function MyApp({ Component, pageProps }) {
   return (
     <>

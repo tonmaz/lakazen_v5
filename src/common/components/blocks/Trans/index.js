@@ -11,10 +11,5 @@ export function Trans(props) {
   const { t } = useTranslation("common");
   const tr = loadTranslations(common, t);
   console.log(tr);
-  return (
-    <div className="text-3xl">
-      <p>Trans component</p>
-      {tr.something}
-    </div>
-  );
+  return <div className="text-3xl">{tr.something}</div>;
 }

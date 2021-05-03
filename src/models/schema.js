@@ -24,8 +24,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "like": {
-                    "name": "like",
+                "likes": {
+                    "name": "likes",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -106,8 +106,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "like": {
-                    "name": "like",
+                "likes": {
+                    "name": "likes",
                     "isArray": false,
                     "type": "Int",
                     "isRequired": false,
@@ -299,5 +299,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "25fa74032f13430dec6096e767e981d3"
+    "version": "fde35f22494af62e0a8b17124d823ce1"
 };

@@ -7,6 +7,9 @@ import React, { memo } from 'react';
 {{#if wantReactComponent}}
 import React from 'react';
 {{/if}}
+{{#if wantCssmodules}}
+    import s from './{{ properCase ComponentName }}.module.css';
+{{/if}}
 {{#if wantStyledComponents}}
 import tw, { styled, css, theme } from 'twin.macro';
 
@@ -38,7 +41,7 @@ export function {{ properCase ComponentName }}(props) {
   <Styled{{ properCase ComponentName }}>
   {{ properCase ComponentName }} component
   {{else}}
-  <div>
+  <div className="flex flex-col">
   {{/if}}
     {{#if wantTranslations}}
     {tr.something}
@@ -47,6 +50,13 @@ export function {{ properCase ComponentName }}(props) {
   {{#if wantStyledComponents}}
   </Styled{{ properCase ComponentName }}>
   {{else}}
+
+      <div >
+          <span className={s.start}>Dianna </span>
+
+      </div>
+
+
   </div>
   {{/if}}
   );

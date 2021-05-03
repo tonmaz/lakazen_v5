@@ -1,8 +1,0 @@
-{
-    "CreateAPIKey": 1,
-    "AppSyncApiName": "Judo",
-    "DynamoDBBillingMode": "PAY_PER_REQUEST",
-    "DynamoDBEnableServerSideEncryption": false,
-    "S3DeploymentBucket": "amplify-judo-staging-154733-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/9935a919714d3dba7fc445e077191be489490b13"
-}

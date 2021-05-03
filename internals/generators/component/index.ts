@@ -16,6 +16,7 @@ export enum ComponentProptNames {
   "wantReactComponent" = "wantReactComponent",
   "wantLoadable" = "wantLoadable",
   "wantTests" = "wantTests",
+  "wantCssmodules" = "wantCssmodules",
 }
 
 export const styledGenerator: PlopGeneratorConfig = {
@@ -74,6 +75,12 @@ export const styledGenerator: PlopGeneratorConfig = {
       default: false,
       message: "Do you want to have tests?",
     },
+    {
+      type: "confirm",
+      name: ComponentProptNames.wantCssmodules,
+      default: true,
+      message: "Do you want to have css modules?",
+    },
   ],
   actions: (data: { [P in ComponentProptNames]: string }) => {
     const componentPath = `${path.join(
@@ -100,14 +107,14 @@ export const styledGenerator: PlopGeneratorConfig = {
       });
     }
 
-    // if (data.wantTranslations) {
-    //     actions.push({
-    //         type: 'add',
-    //         path: `${componentPath}/messages.js`,
-    //         templateFile: './component/messages.ts.hbs',
-    //         abortOnFail: true,
-    //     });
-    // }
+    if (data.wantCssmodules) {
+      actions.push({
+        type: "add",
+        path: `${componentPath}/${data.ComponentName}.module.css`,
+        templateFile: "./component/cssmodule.hbs",
+        abortOnFail: true,
+      });
+    }
 
     actions.push({
       type: "prettify",
